@@ -6,7 +6,7 @@ from gym_jsbsim.catalogs.catalog import Catalog
 from gym_jsbsim.catalogs.property import Property, CustomProperty
 
 
-class Simulation:
+class Simulation():
     """
 
     A class which wraps an instance of JSBSim and manages communication with it.
@@ -228,3 +228,10 @@ class Simulation:
         init_conditions = self.state_to_ic(state)
         self.jsbsim_exec.reset_to_initial_conditions(0)
         self.initialise(init_conditions)
+
+
+# t=Simulation()
+# for _ in range(10000) :
+#     result=t.run()
+#     time=t.get_sim_time()
+#     print(time)
