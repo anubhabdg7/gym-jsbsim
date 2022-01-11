@@ -41,8 +41,8 @@ class Task:
         for name in names_away:
             Catalog.pop(name)
 
-    def get_reward(self, state, sim):
-        return 0
+    # def get_reward(self, state, sim):
+    #     return 0
 
     def is_terminal(self, state, sim):
         return False

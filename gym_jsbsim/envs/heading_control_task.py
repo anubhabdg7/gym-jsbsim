@@ -88,7 +88,9 @@ class HeadingControlTask(Task):
         except OverflowError:
             accel_r = 0
 
-        reward = (heading_r * alt_r * accel_r * roll_r * speed_r) ** (1 / 5)
+        # reward = (heading_r * alt_r * accel_r * roll_r * speed_r) ** (1 / 5)
+        reward = (heading_r + alt_r + roll_r)
+        
         return reward
 
     def is_terminal(self, state, sim):
