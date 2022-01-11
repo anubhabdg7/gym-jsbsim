@@ -6,9 +6,7 @@ import urllib.request
 import shutil
 import subprocess
 import os
-# import jsbsim 
-# from jsbsim import __version__ as jsbsim_version
-jsbsim_version="1.1.10"
+
 def _get_version_hash():
     """Talk to git and find out the tag/hash of our latest commit"""
     try:
@@ -26,10 +24,10 @@ version = _get_version_hash()
 if version[:1] == "v":
     version = version[1:]
 
-# try:
-#     from jsbsim import __version__ as 1.1.10 # noqa: F401
-# except ImportError:
-#     pass
+try:
+    from jsbsim import __version__ as jsbsim_version # noqa: F401
+except ImportError:
+    pass
 
 print("Building wheels {}-{}".format(version, jsbsim_version))
 
