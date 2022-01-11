@@ -30,7 +30,7 @@ def random_agent(T):
       s=np.array(([state[0],state[1],state[2],state[3],state[4],state[5],state[6],state[7],state[8]]))
       action=np.dot(T,s)
       #print(reward)
-      height.append(state[3])
+      height.append(state[0])
    r/=20000
    print("Done")
    return height
